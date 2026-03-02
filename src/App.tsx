@@ -39,6 +39,7 @@ function App() {
         </Routes>
       </main>
       <Footer />
+      <WhatsAppIcon />
     </div>
   );
 }
