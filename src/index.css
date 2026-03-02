@@ -1,0 +1,70 @@
+@import "tailwindcss";
+
+@theme {
+  --color-medical-pink: #d92383;
+  --color-medical-purple: #7a3f91;
+  --color-medical-dark-purple: #2b0d3e;
+  --color-medical-green: #25d366;
+  --color-medical-light: #fdf4ff;
+  --color-medical-accent: #c59dd9;
+
+  --background-image-pink-purple-gradient: linear-gradient(to right, #d92383, #7a3f91);
+}
+
+:root {
+  font-family: 'Outfit', 'Inter', system-ui, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light;
+  color: #2b0d3e;
+  background-color: #ffffff;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+@layer components {
+  .btn-primary {
+    @apply px-6 py-2 rounded-full font-semibold transition-all duration-300;
+  }
+
+  .section-title {
+    @apply text-3xl md:text-4xl font-bold text-center mb-12;
+  }
+
+  .gradient-text {
+    @apply bg-clip-text text-transparent bg-pink-purple-gradient;
+  }
+}
+
+/* Custom Utilities */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+@keyframes spin-slow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin-slow {
+  animation: spin-slow 8s linear infinite;
+}
